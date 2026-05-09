@@ -1,0 +1,68 @@
+BELLEK IZLEME RAPORU
+
+Proje: Graph ve Hash Table Tabanli Lojistik Sistemi
+Ogrenci: Umut Korkmaz
+Numara: 1250505068
+
+---------------------------------------------
+KULLANILAN VERI YAPILARI
+---------------------------------------------
+
+1. Graph (Graf)
+2. Hash Table
+3. Linked List (Zincirleme)
+4. Queue (BFS)
+
+---------------------------------------------
+HASH TABLE BELLEK DURUMU
+---------------------------------------------
+
++---------+----------+----------------------+----------------------+
+| PaketID | Alici    | Bellek Adresi       | Next Pointer         |
++---------+----------+----------------------+----------------------+
+| PKT101  | Ali      | 0x0000000000B91780  | NULL                 |
+| PKT102  | Ayse     | 0x0000000000B917E0  | NULL                 |
+| PKT103  | Mehmet   | 0x0000000000B91840  | NULL                 |
+| PKT104  | Zeynep   | 0x0000000000B918A0  | NULL                 |
+| PKT105  | Can      | 0x0000000000B91900  | NULL                 |
++---------+----------+----------------------+----------------------+
+
+---------------------------------------------
+POINTER BAGLANTI SEMASI
+---------------------------------------------
+
+HashTable[0] --> NULL
+HashTable[1] --> PKT101 --> NULL
+HashTable[2] --> PKT102 --> NULL
+HashTable[3] --> PKT103 --> NULL
+HashTable[4] --> PKT104 --> NULL
+HashTable[5] --> PKT105 --> NULL
+
+---------------------------------------------
+DINAMIK BELLEK YONETIMI
+---------------------------------------------
+
+Projede paket yapilari malloc() fonksiyonu ile
+RAM uzerinde dinamik olarak olusturulmustur.
+
+Her paket node yapisi pointer kullanilarak
+bagli liste mantiginda tutulmustur.
+
+---------------------------------------------
+GRAF GEZINME SONUCU (BFS)
+---------------------------------------------
+
+Istanbul -> Izmir -> Ankara -> Antalya -> Bursa
+
+---------------------------------------------
+SONUC
+---------------------------------------------
+
+Projede Graph ve Hash Table veri yapilari
+hibrit olarak kullanilmistir.
+
+Collision cozumu icin Zincirleme (Chaining)
+teknigi uygulanmistir.
+
+Graf gezinme algoritmasi olarak BFS
+kullanilmistir.
